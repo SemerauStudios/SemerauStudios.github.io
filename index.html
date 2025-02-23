@@ -16,33 +16,47 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
         .background-image {
             position: absolute;
-            top: 50%;
+            top: 0;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
             z-index: -1;
+            height: 100%;
+            width: auto;
         }
-        .container {
+        .header {
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 600px;
-            position: relative;
-            z-index: 1;
-        }
-        .header, .links {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            padding: 10px 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            z-index: 1;
+            width: 80%; /* Adjusted width to align with the background image */
+            max-width: 600px; /* Set a max-width to prevent it from being too wide on large screens */
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Adjusted width to fit within the background image */
+            max-width: 600px; /* Set a max-width to prevent it from being too wide on large screens */
+            position: absolute;
+            bottom: 100px; /* Adjusted bottom position to raise the container */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
         }
         h1 {
             color: #333;
+            margin: 0;
         }
         a {
             display: block;
@@ -74,13 +88,13 @@
 </head>
 <body>
     <img src="https://github.com/SemerauStudios/SemerauStudios.github.io/raw/main/selfie.JPG" class="background-image">
-    <div class="container">
-        <div class="header">
-            <div class="header-content">
-                <img src="logo.png" alt="Semerau Studios Logo" class="logo">
-                <h1>Welcome to Semerau Studios</h1>
-            </div>
+    <div class="header">
+        <div class="header-content">
+            <img src="logo.png" alt="Semerau Studios Logo" class="logo">
+            <h1>Welcome to Semerau Studios</h1>
         </div>
+    </div>
+    <div class="container">
         <div class="links">
             <a href="https://semeraustudios.com/" target="_blank"><i class="fas fa-globe icon"></i>Visit Our Website</a>
             <a href="https://www.instagram.com/semeraustudios" target="_blank"><i class="fab fa-instagram icon"></i>Follow Us on Instagram</a>
