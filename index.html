@@ -69,11 +69,14 @@
             text-decoration: underline;
         }
         .logo {
-            width: 50px;
-            height: 50px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            vertical-align: middle;
-            margin-right: 10px;
+            position: absolute;
+            top: 48%;
+            left: 48.5%; /* Adjusted to be in the middle of the previous and current positions */
+            transform: translate(-50%, -50%);
+            z-index: 0;
         }
         .header-content {
             display: flex;
@@ -97,9 +100,6 @@
             .header-content {
                 flex-direction: column;
             }
-            .logo {
-                margin-bottom: 10px;
-            }
             a {
                 font-size: 16px;
             }
@@ -109,9 +109,9 @@
 </head>
 <body>
     <img src="https://raw.githubusercontent.com/SemerauStudios/SemerauStudios.github.io/main/selfie.JPG" class="background-image">
+    <img src="https://raw.githubusercontent.com/SemerauStudios/SemerauStudios.github.io/main/logo.jpg" alt="Semerau Studios Logo" class="logo">
     <div class="header">
-        <div class="header-content">
-            <img src="https://raw.githubusercontent.com/SemerauStudios/SemerauStudios.github.io/main/logo.jpg" alt="Semerau Studios Logo" class="logo">
+        <div class="header-content" style="justify-content: flex-start;"></div>
             <h1>Welcome to Semerau Studios</h1>
         </div>
     </div>
